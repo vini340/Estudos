@@ -12,7 +12,7 @@ public class POO {
         Caneta c2 = new Caneta();
         c2.cor = "Preta";
         c2.modelo = "Faber";
-        c2.ponta = 1.0;
+        //c2.ponta = 1.0;
         c2.carga = 60;
         c2.tampar();
         c2.status();

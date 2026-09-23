@@ -64,5 +64,50 @@ Exemplo: Um teclado, ele pode ser descrito por suas caracteristicas, pode ser um
 
    * Adiado | Confirmado
    * Local definido | Local definido
+
+   **VISIBILIDADE**
+
+   **Modificadores**
+
+   Indicam o nível de acesso aos componentes (Atributos e Metodos) de uma classe.
+    
+    * + Pública
+    * - Privada
+    * # Protegido
+
+  **Métodos Especiais**
+
+  e = nova Estante 
+
+  **Atributos**
+
+   * Tamanho
+   * Cor
+   * Peso
+   * Tipo
+   * Estrutura
+
+   **Métodos**
+
+   * Guardar
+   * Retirar
+   * Abrir
+   * Fechar
+
+   **Getters**
+
+   São métodos para acessar algo, por exmplo eu quero acessar meu dinheiro no banco, eu vou la e dou um GET ACESS dinheiro, por exemplo.
+
+   **Setters**
+
+   São métodos que podem modificar coisas dentro do proprio objeto com mais segunrança assim como o método GET, normalmente esse método SET precisa de um parâmetro para poder funcionar.
+
+   **Construct**
+
+   São métodos para automatizar o processo.
+
+   
+
+
    
     
