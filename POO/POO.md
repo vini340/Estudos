@@ -106,6 +106,10 @@ Exemplo: Um teclado, ele pode ser descrito por suas caracteristicas, pode ser um
 
    São métodos para automatizar o processo.
 
+   **HISTÓRIA**
+
+   Vai servir como um grande exercício.
+
    
 
 
