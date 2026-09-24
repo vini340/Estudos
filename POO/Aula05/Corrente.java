@@ -7,6 +7,13 @@ public class Corrente {
     private Float saldo;
     protected String status;
 
+    public Corrente(int numConta, String tipo, String dono, Float saldo, String status) {
+        this.setNumConta(numConta);
+        this.setTipo(tipo);
+        this.setDono(dono);
+        this.setSaldo(saldo);
+        this.setStatus(status);
+    }
     public int getNumConta() {
         return numConta;
     }
@@ -36,6 +43,13 @@ public class Corrente {
     }
     public void setStatus(String status) {
         this.status = status;
+    }
+    public void mostrar(){
+        System.out.println("Número da conta: " + this.getNumConta());
+        System.out.println("Qual seria o tipo da conta? " + this.getTipo());
+        System.out.println("Qual é o dono da conta? " + this.getDono());
+        System.out.println("Seu saldo atualmente é de R$" + this.getSaldo());
+        System.out.println("Qual é o estado dessa conta? " + this.getStatus());
     }
     public void abrirConta(){
 
