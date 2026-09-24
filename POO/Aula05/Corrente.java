@@ -7,6 +7,66 @@ public class Corrente {
     private Float saldo;
     protected boolean status;
 
+    public void Mostrar(){
+        System.out.println("--------------------------------");
+        System.out.println("Conta: " + this.getNumConta());
+        System.out.println("Tipo: " + this.getTipo());
+        System.out.println("Dono: " + this.getDono());
+        System.out.println("Saldo: " + this.getSaldo());
+        System.out.println("Status: " + this.getStatus());
+    }
+     public void abrirConta(String t){
+        setTipo(t);
+        setStatus(true);
+        if (t == "CC") {
+            this.setSaldo(50f); 
+        }else if (t == "CP") {
+            this.setSaldo(150f);
+        }
+        System.out.println("Conta aberta com sucesso");
+    }
+    public void fecharConta(){
+        if (this.getSaldo() > 0) {
+            System.out.println("Conta com dinheiro");
+        }else if (this.getSaldo() < 0) {
+            System.out.println("Conta com o saldo negativo");
+        }else{
+            this.setStatus(false);
+            System.out.println("Conta fechada com sucesso");
+        }
+    }
+    public void depositar(Float v){
+        if (this.getStatus()) {
+            this.setSaldo(this.getSaldo() + v);
+        }else{
+            System.out.println("Precisa abrir a conta antes de fazer o depósito");
+        }
+    }
+    public void sacar(Float s){
+        if (this.getStatus()) {
+            if (this.getSaldo() >= s) {
+                this.setSaldo(this.getSaldo() - s);
+            }else{
+                System.out.println("Saldo insuficiente");
+            }
+        }else{
+            System.out.println("Precisa abrir a conta antes de sacar dinheiro da sua conta!");
+        }
+    }
+    public void pagarMensal(){
+        Float v = 0f;
+        if (this.getTipo() == "CC") {
+            v = 12f;
+        }else if (this.getTipo() == "CP") {
+            v = 20f;
+        }
+        if (this.getStatus()) {
+             this.setSaldo(this.getSaldo() - v);
+                System.out.println("Mensalidade paga com sucesso por " + this.getDono()); 
+        }else{
+            System.out.println("Precisa abrir uma conta!");
+        }
+    }
     public Corrente() {
         saldo = 0f;
         status = false;
@@ -41,56 +101,5 @@ public class Corrente {
     public void setStatus(boolean status) {
         this.status = status;
     }
-    public void abrirConta(String t){
-        setTipo(t);
-        setStatus(true);
-        if (t == "CC") {
-            saldo = 50f;
-        }else if (t == "CP") {
-            saldo = 150f;
-        }
-    }
-    public void fecharConta(){
-        if (saldo > 0) {
-            System.out.println("Conta com dinheiro");
-        }else if (saldo < 0) {
-            System.out.println("Conta com o saldo negativo");
-        }else{
-            setStatus(false);
-        }
-    }
-    public void depositar(Float v){
-        if (getStatus()) {
-            setSaldo(getSaldo() + v);
-        }else{
-            System.out.println("Precisa abrir a conta antes de fazer o depósito");
-        }
-    }
-    public void sacar(Float s){
-        if (getStatus()) {
-            if (getSaldo() > s) {
-                setSaldo(getSaldo() - s);
-            }else{
-                System.out.println("Saldo insuficiente");
-            }
-        }else{
-            System.out.println("Precisa abrir a conta antes de sacar dinheiro da sua conta!");
-        }
-    }
-    public void pagarMensal(Float v){
-        if (this.getTipo() == "CC") {
-            v = 12f;
-        }else if (this.getTipo() == "CP") {
-            v = 20f;
-        }
-        if (getStatus()) {
-            if (getSaldo() > v) {
-               setSaldo(getSaldo() - v); 
-            }else{
-                System.out.println("Saldo insuficiente");
-            }
-        }else{
-            System.out.println("Precisa abrir uma conta!");
-        }
-    }
+   
 }
