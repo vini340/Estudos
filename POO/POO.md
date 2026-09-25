@@ -110,7 +110,35 @@ Exemplo: Um teclado, ele pode ser descrito por suas caracteristicas, pode ser um
 
    Vai servir como um grande exercício.
 
+   **ENCAPSULAMENTO**
+
+   Um softawre encapsulado tem o mesmo padrão, ele é capsulado para proteger o codigo, para nao fazer algo de errrado e apagr alguma parte importante por exemplo.
+   Ela oculta partes independentes da implementação permintindo construir partes invisiveis ao mundo exterior.
+
+   **Interface**
+
+   Lista de serviços fornecidas por um componente. É o contato com o mundo exterior, que define o que pode ser feito com um objeto dessa classe.
+
+   * Tornar mudanças invisíveis
+   * Facilitar reutilização de código
+   * Reduzir efeitos colaterais
+
+    + interface
+    + ligar()
+    + desligar()
+    + abrirMenu()
+    + fecharMenu()
+    + maisVolume()
+    + menosVolume()
+    + ligarMudo()
+    + desligarMudo()
+    + play()
+    + pause()
+
+    A interface em sí é so com metodos daquele objeto
    
+   
+  
 
 
    
