@@ -164,6 +164,7 @@ Cada lutador tera esses atributos, sera todos privados por causa do encapsulamen
 
   Esses serão os metodos de cada lutador.
 
+
    
    
   

@@ -16,6 +16,9 @@ public class Lutador {
         l[5] = new CadastroLutador("Nerdaart", "EUA", 30, 1.81, 105.7, 12,
         2, 4);
 
-        l[1].Status();
+        Luta UEC01 = new Luta();
+        UEC01.marcarLuta(l[1], l[0]);
+        UEC01.lutar();
+        l[0].Status();
     }
 }
