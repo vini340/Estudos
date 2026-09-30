@@ -136,6 +136,34 @@ Exemplo: Um teclado, ele pode ser descrito por suas caracteristicas, pode ser um
     + pause()
 
     A interface em sí é so com metodos daquele objeto
+
+**RELACIONAMENTO DE CLASSES**
+
+  **Ultra Emoji Combat**
+
+  Todo lutador terá caracteristicas próprias.
+
+   * Nome
+   * Nacionalidade
+   * Idade
+   * Altura
+   * Peso
+   * Categoria
+   * Vitorias
+   * Empates
+   * Derrotas
+
+Cada lutador tera esses atributos, sera todos privados por causa do encapsulamento de obejtos.
+
+
+  * Apresentar()
+  * Status()
+  * GanharLuta()
+  * PerderLuta()
+  * EmpatarLuta()
+
+  Esses serão os metodos de cada lutador.
+
    
    
   
