@@ -165,8 +165,12 @@ Cada lutador tera esses atributos, sera todos privados por causa do encapsulamen
   Esses serão os metodos de cada lutador.
 
 
-   
-   
+**HERANÇA**
+
+Permite basear uma nova classe na definição de uma outra classe previamente existente.
+Por exemplo os filhos de uma pessoa herdar tanto as caracteristicas tanto os comportamentos do pai ou da mãe.
+ 
+
   
 
 
