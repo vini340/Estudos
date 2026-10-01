@@ -6,19 +6,9 @@ public class Humano {
         Aluno p2 = new Aluno("Gabriel", 18, "Masculino", "Engenharia");
         Funcionario p3 = new Funcionario("João", 30, "Masculino", "TI");
         Professor p4 = new Professor("Maria", 40, "Feminino", "Matemática", 3000);
-        
-        p4.apresentarProfessor();
-        p4.receberAumento();
-        p4.apresentarProfessor();
-        p4.receberAumento();
-        p4.receberAumento();
-        p4.receberAumento();
-        p4.receberAumento();
-        p4.receberAumento();
-        p4.receberAumento();
-        p4.receberAumento();
-        p4.receberAumento();
-        p4.receberAumento();
+        p1.apresentarPessoa();
+        p2.apresentarAluno();
+        p3.apresentarFuncionario();
         p4.apresentarProfessor();
     }
 }

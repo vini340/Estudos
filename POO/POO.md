@@ -171,6 +171,26 @@ Permite basear uma nova classe na definição de uma outra classe previamente ex
 Por exemplo os filhos de uma pessoa herdar tanto as caracteristicas tanto os comportamentos do pai ou da mãe.
  
 
+ **Navegação pela Herança**
+
+ ![alt text](image-1.png)
+
+
+ **Tipos de Heranças**
+
+  * Herança de implementação (Herança pobre) seria uma classe que não adicionou nada a mais.
+  * Herança para Diferença
+
+**Classes Abstratas** não podem gerar objetos.
+
+**Método Abstrato** só pode ser implementado em uma interface ou em classe abstratas.
+
+**Classe Final** não pode ter filhos, seria nomeada como folha.
+
+**Método Final** não pode ser subscrito pelas suas sub-classes, tem que ser obrigatoriamente herdado.
+
+
+
   
 
 
