@@ -21,19 +21,4 @@ public class Cachorro extends Mamifero {
     public void AbanarRabo() {
         System.out.println("Abanando rabo");
     }
-    @Override
-    public void emitirSom() {
-        System.out.println("Latido");
-    }
-    
-    @Override
-    public void locomover() {
-        System.out.println("Correndo");
-    }
-    
-    @Override
-    public void alimentar() {
-        System.out.println("Comendo ração");
-    }
-    
 }
