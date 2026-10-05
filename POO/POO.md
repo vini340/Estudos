@@ -189,6 +189,17 @@ Por exemplo os filhos de uma pessoa herdar tanto as caracteristicas tanto os com
 
 **Método Final** não pode ser subscrito pelas suas sub-classes, tem que ser obrigatoriamente herdado.
 
+**POLIMORFISMO**
+
+Permite que um mesmo nome represente varios comportamentos diferentes.
+
+**Assinatura do Método** Quantidade e os tipos dos parametros.
+
+**Tipos**
+
+ * Sobreposição
+ * Sobrecarga
+
 
 
   
