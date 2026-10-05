@@ -198,7 +198,7 @@ Permite que um mesmo nome represente varios comportamentos diferentes.
 **Tipos**
 
  * Sobreposição : Acontece quando substituimos um método de uma superclasse na sua subclasse, usando a mesma assinatura.
- * Sobrecarga : 
+ * Sobrecarga : Assinaturas diferentes e mesma classe.
 
 
 
