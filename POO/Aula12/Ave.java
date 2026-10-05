@@ -9,6 +9,13 @@ public class Ave extends Animal {
         this.setIdade(idade);
         this.setMembros(membros);
     }
+
+    public void Apresentacao(){
+        System.out.println("Cor da Pena: " + this.getCorPena());
+        System.out.println("Peso: " + this.getPeso());
+        System.out.println("Idade: " + this.getIdade());
+        System.out.println("Membros: " + this.getMembros());
+    }
     
     public String getCorPena() {
         return corPena;

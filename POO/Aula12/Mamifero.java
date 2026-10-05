@@ -10,6 +10,13 @@ public class Mamifero extends Animal {
         this.setMembros(membros);
     }
 
+    public void Apresentacao(){
+        System.out.println("Cor do Pelo: " + this.getCorPelo());
+        System.out.println("Peso: " + this.getPeso());
+        System.out.println("Idade: " + this.getIdade());
+        System.out.println("Membros: " + this.getMembros());
+    }
+
     public String getCorPelo() {
         return corPelo;
     }

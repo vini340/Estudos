@@ -10,6 +10,13 @@ public class Peixe extends Animal {
         this.setMembros(membros);
     }
 
+    public void Apresentacao(){
+        System.out.println("Cor da Escama: " + this.getCorEscama());
+        System.out.println("Peso: " + this.getPeso());
+        System.out.println("Idade: " + this.getIdade());
+        System.out.println("Membros: " + this.getMembros());
+    }
+    
     public String getCorEscama() {
         return corEscama;
     }
