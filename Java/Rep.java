@@ -13,6 +13,6 @@ public class Rep {
             System.out.println("Poderia escrever outro numero: ");
             number2 = scanner.nextInt();
         }
-        System.out.println("Os numeros sao divisiveis");
+        System.out.println("Os numeros sao divisores");
     }
 }
