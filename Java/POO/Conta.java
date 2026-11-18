@@ -6,11 +6,11 @@ public class Conta implements Metodos {
     private double saldo;
     private double chequeEspecial;
 
-    public Conta(String titular, int numero, double saldo, double chequeEspecial) {
+    public Conta(String titular, int numero, double saldo) {
         setTitular(titular);
         setNumero(numero);
         setSaldo(0);
-        setChequeEspecial(0);
+
     }
 
     public String getTitular() {
@@ -32,7 +32,7 @@ public class Conta implements Metodos {
         this.saldo = saldo;
     }
     public double getChequeEspecial() {
-        return chequeEspecial;
+        return this.chequeEspecial;
     }
     public void setChequeEspecial(double chequeEspecial) {
         this.chequeEspecial = chequeEspecial;
@@ -73,7 +73,13 @@ public class Conta implements Metodos {
 
     @Override
     public void consultarChequeEspecial() {
-        
+        if(getSaldo() < 500){
+            this.setChequeEspecial(50);
+            System.out.println("Voce tem acesso ao seu cheque especial, no valor de " + getChequeEspecial());
+        }else if(this.getSaldo() > 500){
+            this.setChequeEspecial(getSaldo() * 0.5);
+            System.out.println("Voce tem acesso ao seu cheque especial, no valor de " + getChequeEspecial());
+        }
     }
 
     @Override
@@ -83,8 +89,15 @@ public class Conta implements Metodos {
 
     @Override
     public void usandoChequeEspecial() {
-        
-    };
+        this.setChequeEspecial(getChequeEspecial() - 100);
+        if(getChequeEspecial() < 0){
+            System.out.println("Voce atingiu o limite do seu cheque especial, sera cobrado uma taxa de 20% do valor do seu saldo");
+            this.setSaldo(getSaldo() - (0.20 * getSaldo()));
+            System.out.println("Seu saldo atual e de: " + getSaldo());
+    }else{
+        System.out.println("Voce ainda tem acesso ao seu cheque especial, no valor de " + getChequeEspecial());
+    }
+    }
 }
 
     
