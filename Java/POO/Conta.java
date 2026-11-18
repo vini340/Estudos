@@ -10,7 +10,6 @@ public class Conta implements Metodos {
         setTitular(titular);
         setNumero(numero);
         setSaldo(0);
-
     }
 
     public String getTitular() {
