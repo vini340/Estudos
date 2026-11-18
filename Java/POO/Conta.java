@@ -7,12 +7,12 @@ public class Conta {
     private double chequeEspecial;
 
     public Conta(String titular, int numero, double saldo, double chequeEspecial) {
-        this.titular = titular;
-        this.numero = numero;
-        this.saldo = saldo;
-        this.chequeEspecial = chequeEspecial;
+        setTitular(titular);
+        setNumero(numero);
+        setSaldo(0);
+        setChequeEspecial(0);
     }
-    
+
     public String getTitular() {
         return titular;
     }
