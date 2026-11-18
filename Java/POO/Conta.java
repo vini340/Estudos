@@ -84,7 +84,17 @@ public class Conta implements Metodos {
 
     @Override
     public void pagarBoleto() {
-       
+        System.out.println("Qual o valor do boleto que deseja pagar?");
+        Scanner scanner = new Scanner(System.in);
+        double valor = scanner.nextDouble();
+        if(valor > 0){
+            if(getSaldo() >= valor){
+                setSaldo(getSaldo() - valor);
+                System.out.println("Boleto pago com sucesso, seu saldo atual e de: " + getSaldo());
+            }else{
+                System.out.println("Saldo insuficiente");
+            }
+        }
     }
 
     @Override
@@ -99,6 +109,3 @@ public class Conta implements Metodos {
     }
     }
 }
-
-    
-

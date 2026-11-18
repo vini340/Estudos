@@ -1,5 +1,4 @@
 package Java.POO;
-import java.util.Scanner;
 public interface Metodos  {
     public void depositarDinheiro();
     public void sacarDinheiro();
