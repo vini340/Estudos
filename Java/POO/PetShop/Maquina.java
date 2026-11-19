@@ -10,6 +10,7 @@ public class Maquina implements Banho {
     private boolean estaLimpo;
     private double nivelAgua = 30.0;
     private double nivelShampoo = 10.0;
+    private int petMaquina;
 
     public Maquina(double peso, String clienteNome, String raça, String tipoPet, Boolean estaLimpo) {
         this.setPeso(peso);
@@ -17,6 +18,14 @@ public class Maquina implements Banho {
         this.setRaça(raça);;
         this.setTipoPet(tipoPet);;
         this.setEstaLimpo(false);
+    }
+
+    public int getPetMaquina() {
+        return petMaquina;
+    }
+
+    public void setPetMaquina(int petMaquina) {
+        this.petMaquina = petMaquina;
     }
 
     public double getNivelAgua() {
@@ -125,11 +134,11 @@ public class Maquina implements Banho {
 
     @Override
     public void verificarPetBanho() {
-        if (getBanho() == true) {
+        if (getBanho() == true && getPetMaquina() == 1) {
             this.setEstaLimpo(true);
             System.out.println("O pet está limpo");
         }else{
-            System.out.println("Não tem nenhum pet tomando banho");
+            System.out.println("Não tem nenhum pet tomando banho, tem que colocar na maquina antes");
         }
     }
 
@@ -137,6 +146,7 @@ public class Maquina implements Banho {
     public void retirarPetMaquina() {
         if (getBanho() == true && getEstaLimpo() == true) {
             System.out.println("Pode retirar o pet do banho");
+            this.setPetMaquina(0);
         }else{
             System.out.println("Por gentileza, verefique se seu pet está limpo ou se tem algum pet tomando banho");
         }
@@ -144,7 +154,12 @@ public class Maquina implements Banho {
 
     @Override
     public void colocarPetMaquina() {
-       
+       if (getBanho() == true && this.getPetMaquina() == 0) {
+            this.setPetMaquina(1);
+            System.out.println("Pet colocado na maquina");
+       }else if (getPetMaquina() <= 1) {
+            System.out.println("Ja tem um pet na maquina, não pode colocar mais do que um");
+       }
     }
 
     @Override
