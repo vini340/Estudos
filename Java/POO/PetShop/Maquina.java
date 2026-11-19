@@ -1,5 +1,7 @@
 package Java.POO.PetShop;
 
+import java.util.Scanner;
+
 public class Maquina implements Banho {
 
     private double peso;
@@ -99,6 +101,8 @@ public class Maquina implements Banho {
         System.out.println("Vamos dar banho em seu pet.");
         this.setNivelAgua(getNivelAgua() - 10.0);
         this.setNivelShampoo(getNivelShampoo() - 2.0);
+       }else{
+        System.out.println("Voce precisa colocar seu pet na maquina para darmos banho");
        }
     }
 
@@ -106,7 +110,10 @@ public class Maquina implements Banho {
     public void abastecerShampoo() {
         if (getNivelShampoo() >= 2.0) {
             System.out.println("O nivel de shampoo esta baixo, tem que reabastecer.");
-            this.setNivelShampoo(10.0);
+            this.setNivelShampoo(getNivelShampoo() + 2.0);
+            System.out.println("Após reabastecer seu nível de shampoo ficou: " + getNivelShampoo() + " litros");
+        }else{
+            System.out.println("Não precisa fazer o reabastecimento do shampoo, pode continuar dando banho.");
         }
     }
 
@@ -114,7 +121,10 @@ public class Maquina implements Banho {
     public void abastecerAgua() {
         if (getNivelAgua() >= 10.0) {
             System.out.println("O nivel da água esta baixo, tem que reabastecer.");
-            this.setNivelAgua(30.0);
+            this.setNivelAgua(getNivelAgua() + 2.0);
+            System.out.println("Após reabastecer seu nível de água ficou: " + getNivelAgua() + " litros");
+        }else{
+            System.out.println("Não precisa fazer o reabastecimento da água, pode continuar dando banho.");
         }
     }
 
@@ -147,8 +157,23 @@ public class Maquina implements Banho {
         if (getBanho() == true && getEstaLimpo() == true) {
             System.out.println("Pode retirar o pet do banho");
             this.setPetMaquina(0);
-        }else{
-            System.out.println("Por gentileza, verefique se seu pet está limpo ou se tem algum pet tomando banho");
+        }else if(getBanho() == true && getEstaLimpo() == false){
+            System.out.println("O pet nao esta limpo ainda, voce tem certeza que vai retira-lo? ");
+            Scanner scanner = new Scanner(System.in);
+            String resposta = scanner.nextLine();
+            switch(resposta){
+                case "Sim":
+                    System.out.println("Certo, mas precisara limpar a maquina antes de colocar outro pet.");
+                    this.setPetMaquina(0);
+                    this.limparMaquina();
+                break;
+                case "Nao":
+                    System.out.println("Então pode esperar mais um pouco e verificar se o pet esta limpo.");
+                break;
+                default:
+                    System.out.println("Opção invalida");
+                break;
+            }
         }
     }
 
@@ -164,7 +189,12 @@ public class Maquina implements Banho {
 
     @Override
     public void limparMaquina() {
-       
+       if (getBanho() == true && this.getPetMaquina() == 0) {
+            System.out.println("Vamos limpar a maquina");
+            this.setNivelAgua(getNivelAgua() - 3.0);
+            this.setNivelShampoo(getNivelShampoo() - 1.0);
+            System.out.println("Seu nivel de agua e shampoo após a limpeza diminuiram, por favor, verefique o nivel da água e shampoo para reabastecer caso precise.");
+       }
     }
     
     
