@@ -10,6 +10,10 @@ public class Dirigir {
         motor.acelerar();
         motor.verificarVelocidade();
         motor.virarDireita();
+        motor.trocarMarcha();
+        motor.acelerar();
+        motor.verificarVelocidade();
 
     }
+
 }
